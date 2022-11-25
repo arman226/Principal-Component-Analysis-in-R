@@ -29,3 +29,15 @@ mean(mydataCor)  # use the mean function the see or calculate the correlation am
 # Since the data is Eligible for Principal Component Analysis, let's execute the "princomp" function and let's assign it to an object called PCA
 PCA <- princomp((mydata))
 View(PCA)
+
+# Evaluate the Result of PCA
+# 1. Check if the PC capture the essence of the original variable
+# 2. Check if the PCs are independent
+
+
+#PC Loadings
+PCA$loadings
+
+# Princiapl Components $
+PC <- PCA$scores
+
