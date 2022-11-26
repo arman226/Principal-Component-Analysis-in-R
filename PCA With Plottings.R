@@ -12,8 +12,9 @@ plot(scale(iris$Sepal.Length), scale(iris$Sepal.Width))
 
 
 myPR
+
 summary(myPR)
-plot(myPR, tye="l")
+plot(myPR, type="l")
 biplot(myPR, scale=0)
 
 #EXTRACT THE PC SCROES
@@ -24,6 +25,10 @@ iris2
 
 
 # PLOT WITH GGPLOT -----
-install.packages("ggplot2")
+#install.packages("ggplot2")
 library(ggplot2)
-ggplot(iris2, aes(PC1, PC2, col = Species, fill=Species)) + stat_ellipse((gean="polygon", col ="black", alpha = 0.5))
+ggplot(iris2, aes(PC1, PC2, col = Species, fill=Species)) + stat_ellipse(geom="polygon", col ="black", alpha = 0.5) + geom_point(shape=21, col="black")
+
+
+#CORRELATION BET VARS AND PCS
+cor(iris[,-5], iris2[,6:7])
