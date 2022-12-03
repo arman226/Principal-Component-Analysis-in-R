@@ -42,10 +42,10 @@ PCA$loadings #the loading matrix will help us evaluate how the principal compone
 #Take note that the number of the components built will ALWAYS be EQUAL to the number of VARIABLES
 
 # Princiapl Components $
-# ths scores matrix will help us evaluate if the PCs are independent
+# ths correlation scores matrix will help us evaluate if the PCs are independent
 # if the PCs are independent, then the correlation must be 0 or must be nearly 0
 PC <- PCA$scores
-View(PC)
+View(PC) #new set of Principal Components
 cor(PC)
 
 
